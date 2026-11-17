@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    background-image:url('fundo-vermelho-de-natal-em-estilo-de-linha-dourada_1017-34792.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+      
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+  }
+  
+  /* Conteúdo Central */
+  .conteudo {
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .conteudo h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .conteudo p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* =========================================
+     ANIMAÇÃO 1: PISCA-PISCA
+     ========================================= */
+  .cordao-luzes {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-top: 4px solid #1a1a1a;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .cordao-luzes li {
+    position: relative;
+    width: 14px;
+    height: 28px;
+    border-radius: 50%;
+    margin-top: 8px;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .cordao-luzes li::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    background: #2b2b2b;
+    border-radius: 2px;
+  }
+  
+  .cordao-luzes li:nth-child(4n+1) {
+    background: #8108c7;
+    box-shadow: 0 4px 20px 4px #8108c7;
+    animation-name: piscar-1;
+  }
+  
+  .cordao-luzes li:nth-child(4n+3) {
+    background: #2aff2a;
+    box-shadow: 0 4px 20px 4px #2aff2a;
+    animation-name: piscar-2;
+  }
+  
+  .cordao-luzes li:nth-child(4n+4) {
+    background: #ffd700;
+    box-shadow: 0 4px 20px 4px #ffd700;
+    animation-name: piscar-1;
+  }
+  
+  .cordao-luzes li:nth-child(4n+2) {
+    background: #00d4ff;
+    box-shadow: 0 4px 20px 4px #00d4ff;
+    animation-name: piscar-2;
+  }
+  
+  @keyframes piscar-1 {
+    0% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.25; box-shadow: none; transform: scale(0.95); }
+  }
+  
+  @keyframes piscar-2 {
+    0% { opacity: 0.25; box-shadow: none; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1.05); }
+  }
+  
+  /* =========================================
+     ANIMAÇÃO 2: FLOCOS DE NEVE
+     ========================================= */
+  .neve-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+  }
+  
+  .floco {
+    position: absolute;
+    top: -10%;
+    color: #ffffff;
+    animation: cair linear infinite;
+  }
+  
+  .floco:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; font-size: 1.2rem; }
+  .floco:nth-child(2) { left: 25%; animation-duration: 12s; animation-delay: 2s; font-size: 1.8rem; opacity: 0.7; }
+  .floco:nth-child(3) { left: 40%; animation-duration: 7s; animation-delay: 4s; font-size: 1rem; }
+  .floco:nth-child(4) { left: 55%; animation-duration: 10s; animation-delay: 1s; font-size: 1.5rem; opacity: 0.8; }
+  .floco:nth-child(5) { left: 70%; animation-duration: 9s; animation-delay: 3s; font-size: 1.3rem; }
+  .floco:nth-child(6) { left: 85%; animation-duration: 11s; animation-delay: 5s; font-size: 1.7rem; opacity: 0.6; }
+  .floco:nth-child(7) { left: 95%; animation-duration: 6s; animation-delay: 2.5s; font-size: 1.1rem; }
+  
+  @keyframes cair {
+    0% {
+      transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(50vh) translateX(25px) rotate(180deg);
+    }
+    100% {
+      transform: translateY(115vh) translateX(-15px) rotate(360deg);
+    }
+  }
+  .Rafa{
+    justify-content: center;
+    align-items:center;
+  }
