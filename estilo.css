@@ -150,3 +150,40 @@
     justify-content: center;
     align-items:center;
   }
+  .btn-natal {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #c62828;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  .btn-natal:hover {
+    transform: scale(1.05);
+    color: #111;
+    text-shadow: 0 0 5px #fff;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      #ffffff,
+      #ffffff 10px,
+      #d32f2f 10px,
+      #d32f2f 20px
+    );
+    background-size: 28px 28px;
+    animation: listras-movendo 0.8s linear infinite;
+  }
+  
+  @keyframes listras-movendo {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 28px 0;
+    }
+  }
+  
